@@ -4,7 +4,7 @@ if (!isset($conn) || $conn === null) {
     die('Erro ao conectar com o banco de dados.');
 }
 
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT * FROM clientes";
 $resultado = mysqli_query($conn, $sql);
 
 if ($resultado === false) {

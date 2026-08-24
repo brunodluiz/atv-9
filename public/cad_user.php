@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'] ?? '';
     $email = $_POST['email'] ?? '';
 
-    $sql = "INSERT INTO usuarios (nome, email) VALUES (?, ?)";
+    $sql = "INSERT INTO clientes (nome, email) VALUES (?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
 
     if ($stmt === false) {

@@ -7,7 +7,7 @@ if (!isset($conn) || $conn === null) {
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
-$sql = "SELECT * FROM pets WHERE id = ?";
+$sql = "SELECT * FROM animais WHERE id = ?";
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, 'i', $id);
 mysqli_stmt_execute($stmt);
@@ -18,7 +18,7 @@ if (!$pet) {
     die('Pet não encontrado.');
 }
 
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT * FROM clientes";
 $resultado = mysqli_query($conn, $sql);
 
 if ($resultado === false) {
@@ -31,12 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $porte = trim($_POST['porte']);
     $usuario_id = (int) $_POST['usuario'];
 
-    $sql = "UPDATE pratos SET nome = ?, idade = ?, porte = ?, id_usuario = ? WHERE id = ?";
+    $sql = "UPDATE animais SET nome = ?, idade = ?, porte = ?, cliente_id = ? WHERE id = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, 'ssdsi', $nome, $idade, $porte, $usuario_id, $id);
 
     if (mysqli_stmt_execute($stmt)) {
-        echo "Prato atualizado com sucesso!";
+        echo "Pet atualizado com sucesso!";
         echo "<br><a href='../index.php'>Voltar</a>";
         exit();
     } else {

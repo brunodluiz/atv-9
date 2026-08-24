@@ -6,7 +6,7 @@ if (!isset($conn) || $conn === null) {
 
 $id = $_GET['id'];
 
-$stmt = mysqli_prepare($conn, "DELETE FROM pratos WHERE id = ?");
+$stmt = mysqli_prepare($conn, "DELETE FROM animais WHERE id = ?");
 mysqli_stmt_bind_param($stmt, 'i', $id);
 
 if (mysqli_stmt_execute($stmt)) {

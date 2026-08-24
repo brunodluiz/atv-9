@@ -1,17 +1,17 @@
 <?php
 
 include 'infra/connect.php';
-$sql = "SELECT * FROM pets";
+$sql = "SELECT * FROM animais";
 $resultado = mysqli_query($conn, $sql);
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario_id = $_POST['usuario'] ?? null;
 
     if ($usuario_id) {
-        $sql = "SELECT * FROM pets WHERE id_usuario = $usuario_id";
+        $sql = "SELECT * FROM animais WHERE cliente_id = $usuario_id";
         $resultado = mysqli_query($conn, $sql);
     } else {
-        $sql = "SELECT * FROM pets";
+        $sql = "SELECT * FROM animais";
         $resultado = mysqli_query($conn, $sql);
     }
 }
