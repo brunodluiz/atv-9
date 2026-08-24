@@ -1,13 +1,13 @@
 <?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "petshop_db";
 
-    $host = "localhost";
-    $user = "root";
-    $password = "root";
-    $database = "crud_cliente";
-    $conn = mysqli_connect($host, $user, $password, $database);
+$conn = mysqli_connect($host, $user, $pass, $dbname);
 
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
+if (!$conn) {
+    die("Falha na conexão: " . mysqli_connect_error());
+}
+mysqli_set_charset($conn, "utf8mb4");
 ?>
