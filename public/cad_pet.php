@@ -21,17 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = mysqli_prepare($conn, $sql);
 
     if ($stmt === false) {
-        die('Erro ao preparar a inserção do prato: ' . mysqli_error($conn));
+        die('Erro ao preparar a inserção do pet: ' . mysqli_error($conn));
     }
 
-    mysqli_stmt_bind_param($stmt, 'ssdsi', $nome, $descricao, $preco, $categoria, $usuario_id);
+    mysqli_stmt_bind_param($stmt, 'ssdsi', $nome, $idade, $porte, $usuario_id);
 
     if (mysqli_stmt_execute($stmt)) {
-        echo "Prato cadastrado com sucesso!";
+        echo "Pet cadastrado com sucesso!";
         echo "<br><a href='../index.php'>Voltar</a>";
         exit();
     } else {
-        echo "Erro ao cadastrar prato: " . mysqli_error($conn);
+        echo "Erro ao cadastrar pet: " . mysqli_error($conn);
     }
 
     mysqli_stmt_close($stmt);
