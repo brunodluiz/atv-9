@@ -20,5 +20,5 @@ CREATE TABLE animais (
     FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE
 );
 
-insert into clientes(nome, email, telefone) values
+insert into clientes(nome, email) values
 ('')
