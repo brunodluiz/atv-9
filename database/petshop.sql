@@ -29,3 +29,10 @@ insert into usuarios (nome, email) values
 ('Camila Rodrigues', 'camila.rodrigues@email.com'),
 ('Lucas Ferreira', 'lucas.ferreira@email.com'),
 ('Beatriz Martins', 'beatriz.martins@email.com');
+
+insert into animais (cliente_id, nome, porte, idade) values
+(1, 'Rex', 'Grande', 3),
+(2, 'Mia', 'Pequeno', 2),
+(3, 'Bolt', 'Médio', 1),
+(4, 'Luna', 'Pequeno', 4),
+(5, 'Max', 'Grande', 5);
