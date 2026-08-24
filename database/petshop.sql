@@ -17,17 +17,17 @@ CREATE TABLE IF NOT EXISTS animais (
     FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE
 );
 
-INSERT INTO clientes (nome, email, telefone) VALUES
-('João Silva', 'joao.silva@email.com', '11999990001'),
-('Maria Santos', 'maria.santos@email.com', '11999990002'),
-('Carlos Oliveira', 'carlos.oliveira@email.com', '11999990003'),
-('Ana Souza', 'ana.souza@email.com', '11999990004'),
-('Pedro Costa', 'pedro.costa@email.com', '11999990005'),
-('Juliana Lima', 'juliana.lima@email.com', '11999990006'),
-('Rafael Almeida', 'rafael.almeida@email.com', '11999990007'),
-('Camila Rodrigues', 'camila.rodrigues@email.com', '11999990008'),
-('Lucas Ferreira', 'lucas.ferreira@email.com', '11999990009'),
-('Beatriz Martins', 'beatriz.martins@email.com', '11999990010');
+INSERT INTO clientes (nome, email) VALUES
+('João Silva', 'joao.silva@email.com'),
+('Maria Santos', 'maria.santos@email.com'),
+('Carlos Oliveira', 'carlos.oliveira@email.com'),
+('Ana Souza', 'ana.souza@email.com'),
+('Pedro Costa', 'pedro.costa@email.com'),
+('Juliana Lima', 'juliana.lima@email.com'),
+('Rafael Almeida', 'rafael.almeida@email.com'),
+('Camila Rodrigues', 'camila.rodrigues@email.com'),
+('Lucas Ferreira', 'lucas.ferreira@email.com'),
+('Beatriz Martins', 'beatriz.martins@email.com');
 
 INSERT INTO animais (cliente_id, nome, porte, idade) VALUES
 (1, 'Rex', 'Grande', 3),
