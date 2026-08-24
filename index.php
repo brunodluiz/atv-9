@@ -1,7 +1,7 @@
 <?php
 
 include 'infra/connect.php';
-$sql = "SELECT * FROM pratos";
+$sql = "SELECT * FROM pets";
 $resultado = mysqli_query($conn, $sql);
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {

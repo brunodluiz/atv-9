@@ -1,5 +1,5 @@
-create database crud_clientes;
-use crud_clientes;
+create database petshop_db;
+use petshop_db;
 
 CREATE TABLE clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
